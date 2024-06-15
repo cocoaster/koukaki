@@ -1,0 +1,207 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
+.banner {
+  padding: 0;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  background: none !important;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto !important;
+  animation: slideDown 1.5s ease-out backwards;
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0 !important;
+    left: 0;
+    z-index: 2;
+  }
+
+  .banner-img {
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    display: block;
+  }
+
+  .logo-img {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    z-index: 3;
+    animation: slideUpLogo 1.5s ease-out backwards;
+  }
+
+  @media (max-width: 768px) {
+    height: 235px !important;
+    min-height: 235px !important;
+
+    video {
+      display: none !important;
+      visibility: hidden;
+    }
+
+    .banner-img {
+      top: 40px;
+      height: 235px !important;
+    }
+
+    img.parallax {
+      position: absolute;
+      top: 35%;
+      left: 22%;
+      width: 60%;
+      height: auto;
+    }
+  }
+}
+
+
+#story{  
+    z-index: 3;
+  }
+
+.story #characters {
+    margin: auto; 
+    margin-top: 40px !important;
+    display: flex;
+    text-align: center;
+}
+
+#studio{  
+    animation-delay: 0.4s;
+    z-index: 2;
+  }
+
+.main-character{
+   width: 100%;
+    margin: auto;
+  }
+
+#oscar-nomination{
+    position: relative;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    animation-delay: 0.6s;
+    z-index: 1;
+  }
+
+.rotate-image::after {
+    content: ""; 
+    animation: rotate-background 20s linear infinite;
+    transform-origin: center;
+  }
+
+.first-rotate-image::after {
+    content: ""; 
+    animation: rotate-background 20s linear infinite;
+    transform-origin: center;
+  }
+
+._first-rotate-image::after {
+    content: ""; 
+    animation: rotate-background 20s linear infinite;
+    transform-origin: center;
+  }
+
+.story {
+    &__article {
+      margin: auto !important;
+        &.second-rotate-image::after {
+            animation: rotate-background 20s linear infinite; 
+            transform-origin: center;
+        }
+    }
+}
+
+
+/* Chemin vers l'image dans le dossier uploads */
+#place {
+  background-image: url("/wp-content/uploads/2024/05/Studio_Koukaki-image_place.png")!important;
+  position: relative;
+  &::before {
+    content: url('/wp-content/uploads/2024/05/big_cloud.png');
+position: absolute;
+top: 10%;
+right: 6%;
+filter: blur(15px);
+  }
+  &::after {
+    content: url('/wp-content/uploads/2024/05/little_cloud.png');
+   position: absolute;
+   top: 40%;
+   right: 37%;
+   filter: blur(13px);
+  }
+
+  &.scrolling-down {
+    &::before {
+      z-index: 2;
+      animation: moveLeft 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    }
+    &::after {
+      z-index: 2;
+      animation: moveLeft 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    }
+  }
+
+h3 {
+z-index: 9 !important;
+}
+
+  &.scrolling-up {
+    &::before {
+      z-index: 2;
+      animation: moveRight 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    }
+    &::after {
+      z-index: 2;
+      animation: moveRight 3s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    }
+  }
+}
+
+
+// Animation titles
+
+/* Styles de base pour les titres */
+.slide-up, .title-animation {
+  position: relative;
+  z-index: 10;
+  display: block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+/* Animation lorsque les éléments sont visibles */
+.slide-up.visible, .title-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  html, body{
+    overflow-x: hidden;
+  }
+  .banner {
+    margin-top: 0;
+  }
+  h2, h3{
+    font-size: 24px;
+  }
+  
+}
+
+
+

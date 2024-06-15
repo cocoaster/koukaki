@@ -1,0 +1,65 @@
+
+.swiper-container{
+    display: flex;
+    position: relative;
+    height: auto;
+    overflow-x: hidden;
+
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+   
+  
+}
+
+.swiper-slide {
+   
+    transition: transform 0.5s ease; 
+}
+
+/* Enlever les backgrounds et ombres des images */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right,
+.swiper-slide-shadow-top,
+.swiper-slide-shadow-bottom,
+.swiper-slide-shadow-coverflow {
+    display: none !important;
+}
+
+
+/* Ajuster les styles des images */
+.swiper-slide img {
+    max-width: none; 
+}
+
+
+@media (max-width: 768px) {
+    .swiper-slide{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .swiper-slide img {
+        width: 100%; 
+        height: auto; 
+    }
+    .story #characters div {
+       flex: none;
+       flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+    .swiper-container {
+        height: auto; 
+    }
+  }
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+ // Animation pour la vidéo
+ @keyframes slideDown {
+  from {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpLogo {
+from {
+  transform: translateY(100%); // Commence en bas
+  opacity: 0;
+}
+to {
+  transform: translateY(0); // Se termine au centre
+  opacity: 1;
+}
+}
+
+
+
+//   Animation des fleurs
+@keyframes rotate-background {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-and-scale-big {
+  from {
+      transform: rotate(0deg) scale(3);
+  }
+  to {
+      transform: rotate(360deg) scale(3);
+  }
+}
+@keyframes rotate-and-scale-medium {
+  from {
+      transform: rotate(0deg) scale(1.5);
+  }
+  to {
+      transform: rotate(360deg) scale(1.5);
+  }
+}
+@keyframes rotate-and-scale-small {
+  from {
+      transform: rotate(0deg) scale(0.6);
+  }
+  to {
+      transform: rotate(360deg) scale(0.6);
+  }
+}
+@keyframes rotate-and-scale-very-small {
+  from {
+      transform: rotate(0deg) scale(0.35);
+  }
+  to {
+      transform: rotate(360deg) scale(0.35);
+  }
+}
+
+//   Animation du logo dans la video
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); // Modifiez cette valeur pour ajuster l'amplitude du flottement
+  }
+}
+
+@keyframes combinedEffect {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes moveLeft {
+from {
+  transform: translateX(0);
+}
+to {
+  transform: translateX(-470px); 
+}
+}
+
+@keyframes moveRight {
+from {
+  transform: translateX(-470px); 
+}
+to {
+  transform: translateX(0);
+}
+}
+
+// Animation des titres du menu
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

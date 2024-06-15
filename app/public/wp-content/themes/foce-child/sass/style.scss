@@ -1,0 +1,23 @@
+
+// Import Mixins
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+
+// Import animations
+@import 'animations/animations';
+
+// Import layouts
+@import "layouts/front-page.scss";
+@import "layouts/template-parts";
+
+// import components
+@import "components/navigation.scss";
+
+// Import elements
+@import "base/elements/footer";
+
+
+
+
+

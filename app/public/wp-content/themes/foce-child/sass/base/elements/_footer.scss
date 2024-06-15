@@ -1,0 +1,11 @@
+.rotate-image::before {
+    content: ""; 
+    animation: rotate-background 20s linear infinite;
+    transform-origin: center;
+  }
+.rotate-image::after {
+    content: ""; 
+    animation: rotate-background 20s linear infinite;
+    transform-origin: center;
+  }
+  

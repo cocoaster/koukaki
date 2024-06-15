@@ -1,0 +1,48 @@
+// // Mixin pour les animations de rotation et de mise à l'échelle
+// mixin navigation
+@mixin nav-animation($index, $delay) {
+    .menu-container.active .nth-item#{$index} .nav-link {
+        animation: slideUp 0.7s ease-in-out forwards;
+        animation-delay: $delay;
+    }
+}
+  
+        
+
+// mixin front-page
+
+@mixin responsive-video($height-desktop, $height-mobile) {
+    height: $height-desktop !important;
+
+    @media (max-width: 768px) {
+        height: $height-mobile !important;
+        min-height: $height-mobile !important;
+
+        & video {
+            display: none !important;
+            visibility: hidden;
+        }
+
+        & .banner-img {
+            height: $height-mobile !important;
+        }
+
+        & .logo-img {
+            top: 25%;
+            left: 22%;
+            width: 60%;
+            height: auto;
+        }
+    }
+}
+
+@mixin slide-up-animation($delay) {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out $delay, transform 1s ease-out $delay;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
