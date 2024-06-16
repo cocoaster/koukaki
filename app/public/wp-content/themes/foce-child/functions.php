@@ -1,9 +1,5 @@
 <?php
 function enqueue_custom_scripts_and_styles() {
-    // Deregister jQuery
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.7.1.min.js', [], '3.7.1');
-    wp_enqueue_script('jquery');
 
     // Custom animation script
     wp_enqueue_script('custom-animation-script', get_stylesheet_directory_uri() . '/js/custom-animation.js', ['jquery'], false, true);
