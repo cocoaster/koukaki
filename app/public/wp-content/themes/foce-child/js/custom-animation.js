@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (video) video.style.display = 'none';
     }
 
-    // Attendre que Swiper soit prêt
+    // Wait until Swiper is ready to display the carousel
     if (typeof Swiper !== 'undefined') {
         const swiperContainer = document.querySelector('.swiper-container');
         if (swiperContainer) {
