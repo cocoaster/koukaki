@@ -9,7 +9,7 @@
   }
 }
 
- // Animation pour la vidéo
+ // Video Animations 
  @keyframes slideDown {
   from {
     transform: translateY(-40%);
@@ -23,18 +23,18 @@
 
 @keyframes slideUpLogo {
 from {
-  transform: translateY(100%); // Commence en bas
+  transform: translateY(100%); // Start from bottom
   opacity: 0;
 }
 to {
-  transform: translateY(0); // Se termine au centre
+  transform: translateY(0); // End in the center
   opacity: 1;
 }
 }
 
 
 
-//   Animation des fleurs
+//   Flowers Animations
 @keyframes rotate-background {
   from {
     transform: rotate(0deg);
@@ -77,13 +77,13 @@ to {
   }
 }
 
-//   Animation du logo dans la video
+// Logo animation in the video
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px); // Modifiez cette valeur pour ajuster l'amplitude du flottement
+    transform: translateY(-20px); 
   }
 }
 
@@ -114,7 +114,7 @@ to {
 }
 }
 
-// Animation des titres du menu
+// Menu titles animation
 @keyframes slideUp {
   from {
       opacity: 0;
