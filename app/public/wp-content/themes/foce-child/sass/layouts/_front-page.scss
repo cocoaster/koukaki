@@ -125,7 +125,7 @@ html, body {
 }
 
 
-/* Chemin vers l'image dans le dossier uploads */
+/* Path to the image in the uploads folder */
 #place {
   background-image: url("/wp-content/uploads/2024/05/Studio_Koukaki-image_place.png")!important;
   position: relative;
@@ -174,7 +174,7 @@ z-index: 9 !important;
 
 // Animation titles
 
-/* Styles de base pour les titres */
+/* Styles for titles */
 .slide-up, .title-animation {
   position: relative;
   z-index: 10;
@@ -184,7 +184,7 @@ z-index: 9 !important;
   transition: opacity 1s ease-out, transform 2s ease-out;
 }
 
-/* Animation lorsque les éléments sont visibles */
+/* Animation when elements are visible */
 .slide-up.visible, .title-animation.visible {
   opacity: 1;
   transform: translateY(0);
