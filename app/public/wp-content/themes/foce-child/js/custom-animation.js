@@ -173,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(applyParallaxEffect, 16);
 
-    // Ajouter des logs pour vérifier l'état des éléments avant et après l'ouverture/fermeture du menu
+     // Add logs to check the state of elements before and after opening/closing the menu
+
     console.log('Initial navLink states:');
     navLinks.forEach(link => {
         console.log(link.style.opacity, link.style.transform);
@@ -181,8 +182,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('Initial menuContainer state:', menuContainer.classList);
 
-    // Vérifier les états après ouverture/fermeture
-    menuToggle.addEventListener('click', function () {
+// Check the states after opening/closing
+menuToggle.addEventListener('click', function () {
         console.log('menuToggle clicked:', menuToggle.classList.contains('active') ? 'opening' : 'closing');
         navLinks.forEach(link => {
             console.log(link.style.opacity, link.style.transform);
