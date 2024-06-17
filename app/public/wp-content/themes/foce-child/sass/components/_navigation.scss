@@ -16,13 +16,13 @@
     z-index: 9999;
 }
 
-// ajustement du titre de la barre de navigation
+// Adjust the navigation bar title
 .site-title {
     flex-grow: 1;
     text-align: center;
 }
 
-// Menu Hamburger 
+// Hamburger Menu  
 .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
     margin-bottom: auto !important;
 }
 
-//  Transformation du menu hamburger
+// Transform the hamburger menu
 .menu-toggle.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -288,10 +288,6 @@
     transform-origin: center;
 }
 
-    // Classe pour arrêter l'animation du logo-img
-.stop-animation {
-    animation: none !important;
-}
 
     @media (max-width: 768px) {
     .banner .logo-img {
