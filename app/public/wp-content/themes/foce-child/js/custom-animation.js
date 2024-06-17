@@ -16,31 +16,37 @@ document.addEventListener('DOMContentLoaded', function () {
         if (video) video.style.display = 'none';
     }
 
-    const swiper = new Swiper('.swiper-container', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: false,
-        slidesPerView: 3,
-        loop: true,
-        spaceBetween: 110,
-        autoplay: {
-            delay: 4500,
-            disableOnInteraction: false
-        },
-        coverflowEffect: {
-            rotate: 60,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-    });
-
-    swiper.slides.forEach(slide => {
-        slide.style.transform = '';
-    });
-    const activeSlide = swiper.slides[swiper.activeIndex];
-    activeSlide.style.transform = 'translateX(500px)';
+    // Attendre que Swiper soit prêt
+    if (typeof Swiper !== 'undefined') {
+        const swiperContainer = document.querySelector('.swiper-container');
+        if (swiperContainer) {
+            console.log("Initialisation de Swiper...");
+            const swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: false,
+                slidesPerView: 3,
+                loop: true,
+                spaceBetween: 110,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false
+                },
+                coverflowEffect: {
+                    rotate: 60,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+            });
+            console.log("Swiper initialisé.");
+        } else {
+            console.error("Élément Swiper non trouvé.");
+        }
+    } else {
+        console.error("Swiper n'est pas défini.");
+    }
 
     function isScrolledIntoView(elem) {
         var rect = elem.getBoundingClientRect();
