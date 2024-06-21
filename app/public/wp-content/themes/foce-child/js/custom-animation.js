@@ -49,15 +49,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function isScrolledIntoView(elem) {
-        var rect = elem.getBoundingClientRect();
-        var elemTop = rect.top;
-        var elemBottom = rect.bottom;
+        let rect = elem.getBoundingClientRect();
+        let elemTop = rect.top;
+        let elemBottom = rect.bottom;
         return (elemTop >= 0 && elemTop <= window.innerHeight) || (elemBottom >= 0 && elemBottom <= window.innerHeight);
     }
 
     function applySlideUpAnimations() {
-        var slideUpElements = document.querySelectorAll('.slide-up');
-        var titleAnimationElements = document.querySelectorAll('.title-animation');
+        let slideUpElements = document.querySelectorAll('.slide-up');
+        let titleAnimationElements = document.querySelectorAll('.title-animation');
 
         slideUpElements.forEach(function (elem) {
             if (isScrolledIntoView(elem) && !elem.classList.contains('visible')) {
@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function applyParallaxEffect() {
-        var image = document.querySelector('img.parallax');
+        let image = document.querySelector('img.parallax');
         if (image) {
-            var scrolled = window.scrollY;
-            var rate = scrolled * 0.5;
-            var floatOffset = 20 * Math.sin(Date.now() / 1000);
+            let scrolled = window.scrollY;
+            let rate = scrolled * 0.5;
+            let floatOffset = 20 * Math.sin(Date.now() / 1000);
             image.style.transform = 'translateY(' + (rate + floatOffset) + 'px)';
             console.log('applyParallaxEffect:', image.style.transform);
         }
